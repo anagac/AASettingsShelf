@@ -1,8 +1,6 @@
 # AASettingsShelf
 Component to animate a multipurpose "shelf". 
 
-<iframe src='https://gfycat.com/ifr/GlossyIllegalEmperorshrimp' frameborder='0' scrolling='no' width='640' height=''></iframe>
-
 ##Set up
 * Add .h and .m files to your project
 * In you XIB or Storyboard, design a custom View any settings or contents you want to show. This view should be a direct child of the controller's main view. 
@@ -13,6 +11,7 @@ Component to animate a multipurpose "shelf".
 ```Objective-C
 [self.shelfView toggleShelf:YES];
 ```
+![ShelfGif](https://thumbs.gfycat.com/GlossyIllegalEmperorshrimp-size_restricted.gif)
 
 ##License
 
