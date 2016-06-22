@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FEb-TA-WIF">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="LOy-CD-L9z">
+            <objects>
+                <navigationController id="FEb-TA-WIF" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xbA-bA-4pi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.48226829650000003" green="0.0014062435519999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="W5J-N4-RrA" kind="relationship" relationship="rootViewController" id="eDt-Je-bET"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ssv-dI-pqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327" y="387"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8rW-ZN-LMI">
+            <objects>
+                <viewController id="W5J-N4-RrA" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="opg-wt-afF"/>
+                        <viewControllerLayoutGuide type="bottom" id="e4H-oy-ZRx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ACb-Vg-ry0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpk-0M-5g9" customClass="AASettingsShelf">
+                                <rect key="frame" x="0.0" y="64" width="600" height="150"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mhl-OV-mep">
+                                        <rect key="frame" x="25" y="25" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter by location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lf4-gA-Q2J">
+                                        <rect key="frame" x="94" y="30" width="126" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter by Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elS-fm-LfL">
+                                        <rect key="frame" x="94" y="81" width="111" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfo-JS-Wdo">
+                                        <rect key="frame" x="25" y="76" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" red="0.3411764706" green="0.75686274509999996" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Mhl-OV-mep" firstAttribute="top" secondItem="mpk-0M-5g9" secondAttribute="top" constant="25" id="1Kt-Wl-fqT"/>
+                                    <constraint firstItem="lf4-gA-Q2J" firstAttribute="centerY" secondItem="Mhl-OV-mep" secondAttribute="centerY" id="1eA-d1-Vea"/>
+                                    <constraint firstAttribute="height" constant="150" id="4zt-Dd-Dc4"/>
+                                    <constraint firstItem="lf4-gA-Q2J" firstAttribute="leading" secondItem="Mhl-OV-mep" secondAttribute="trailing" constant="20" id="O5s-cw-qEf"/>
+                                    <constraint firstItem="elS-fm-LfL" firstAttribute="centerY" secondItem="cfo-JS-Wdo" secondAttribute="centerY" id="RDO-3t-Suy"/>
+                                    <constraint firstItem="elS-fm-LfL" firstAttribute="leading" secondItem="cfo-JS-Wdo" secondAttribute="trailing" constant="20" id="XOG-0o-sga"/>
+                                    <constraint firstItem="Mhl-OV-mep" firstAttribute="leading" secondItem="mpk-0M-5g9" secondAttribute="leading" constant="25" id="om1-Kh-kR7"/>
+                                    <constraint firstItem="cfo-JS-Wdo" firstAttribute="leading" secondItem="Mhl-OV-mep" secondAttribute="leading" id="rhm-qF-Uq0"/>
+                                    <constraint firstItem="cfo-JS-Wdo" firstAttribute="top" secondItem="Mhl-OV-mep" secondAttribute="bottom" constant="20" id="tUL-lZ-f4I"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wl-6N-MyD">
+                                <rect key="frame" x="264" y="285" width="72" height="30"/>
+                                <state key="normal" title="Toggle me"/>
+                                <connections>
+                                    <action selector="navBarButtonTapped:" destination="W5J-N4-RrA" eventType="touchUpInside" id="4PR-Rs-eZU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Wl-6N-MyD" firstAttribute="centerY" secondItem="ACb-Vg-ry0" secondAttribute="centerY" id="04A-w9-K1M"/>
+                            <constraint firstItem="mpk-0M-5g9" firstAttribute="top" secondItem="ACb-Vg-ry0" secondAttribute="topMargin" constant="64" id="5Dh-0I-Jwb"/>
+                            <constraint firstItem="mpk-0M-5g9" firstAttribute="leading" secondItem="ACb-Vg-ry0" secondAttribute="leading" id="IBf-p0-CrR"/>
+                            <constraint firstItem="4Wl-6N-MyD" firstAttribute="centerX" secondItem="ACb-Vg-ry0" secondAttribute="centerX" id="OiL-RK-Fr8"/>
+                            <constraint firstAttribute="trailing" secondItem="mpk-0M-5g9" secondAttribute="trailing" id="fUo-2V-NQw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MAG-xl-rxz">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="GyL-lF-i89">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="774-nu-Iiz">
+                                <rect key="frame" x="20" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="navBarButtonTapped:" destination="W5J-N4-RrA" eventType="touchUpInside" id="be9-Tq-o8Z"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="shelfView" destination="mpk-0M-5g9" id="nUx-gx-u68"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WHB-cd-BFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053" y="387"/>
+        </scene>
+    </scenes>
+</document>
